@@ -1,0 +1,82 @@
+body {
+  /* 爱心跳动,抖音ID:不吃蟹黄 作品参考bootstrapmb,引入three基于canvas制作 */
+  background: rgb(0, 0, 0);
+  overflow: hidden;
+  margin: 0;
+  /* background-color: #000 !important; */
+}
+
+.atitle{
+  top: 5px;
+  left: 800px;
+  position:absolute;
+  float:left;
+  color: rgba(255,255,255,0.7);
+  font-family: "love";
+  font-size: 40px;
+}
+
+
+
+.daohang{
+  top: 50px;
+  left: 150px;
+}
+
+#loveheart{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  color: rgba(255,255,255,0.7);
+  font-size: 20px;
+  font-family: "love";
+  text-transform: uppercase;
+  text-decoration: none;
+  box-sizing: border-box;
+  background: transparent;
+  background-size: 400%;
+  border-radius: 30px;
+  z-index: 1;
+}
+
+@font-face {
+  font-family: love;
+  src: url(../font/PermanentMarker-Regular.ttf);
+}
+
+#loveheart:hover{
+  animation: animate 8s linear infinite;
+}
+@keyframes animate {
+0%{
+  background-position: 0%;
+}
+100%{
+  background-position: 400%;
+}
+}
+#loveheart:before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1;
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 400%;
+  border-radius: 40px;
+  opacity:0;
+  transition: 0.5s;
+
+}
+#loveheart:hover:before{
+  filter:blur(20px);
+  opacity: 1;
+  animation: animate 8s linear infinite;
+}

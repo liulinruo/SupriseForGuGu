@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title>Typewriter effect</title>
+  </head>
+  <style>
+    #div1,#div2,#div3,#div4,#div5{
+        display:none;
+    }
+    .divCont{
+        position: relative;
+        width: 200px;
+        background-color: #3a5b7f;
+        height: 200px;
+        overflow: hidden;
+    }
+    .divCont div{
+        width: 200px;
+        position: relative;
+    }
+ 
+</style>
+<script type="text/javascript">
+    var i = 1;
+    var count = 10;
+ 
+    function showDiv(id) {
+        document.getElementById("div" + id).style.display = 'block';
+        i++;
+        if (i > count) {
+            clearInterval(timMove);
+        }
+    }
+ var   timMove = setInterval("showDiv(i)", 500);
+ 
+ 
+</script>
+<body>
+<h1>I'm Matt, I'm a</h1>
+<div class="divCont">
+    <div class="mymove01" id="div1">你好啊是不是啊</div>
+    <div class="mymove01" id="div2">你好啊是不是啊</div>
+    <div class="mymove01" id="div3">你好啊是不是啊</div>
+    <div class="mymove01" id="div4">你好啊是不是啊</div>
+    <div class="mymove01" id="div5">你好啊是不是啊</div>
+</div>
+</body>
+</html>

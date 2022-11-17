@@ -1,0 +1,177 @@
+*{
+    margin:0;
+    padding:0;
+}
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+body {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-filter: contrast(120%);
+    filter: contrast(120%);
+    background-color: black;
+    position: relative;
+}
+
+.daohang{
+    top: 50px;
+    right: 200px;
+}
+
+#loveheart{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    color: rgba(255,255,255,1);
+    font-size: 20px;
+    font-family: "love";
+    text-transform: uppercase;
+    text-decoration: none;
+    box-sizing: border-box;
+    background: transparent;
+    background-size: 400%;
+    border-radius: 30px;
+    z-index: 1;
+}
+
+@font-face {
+    font-family: love;
+    src: url(../font/PermanentMarker-Regular.ttf);
+}
+
+#loveheart:hover{
+    animation: animate 8s linear infinite;
+}
+@keyframes animate {
+0%{
+    background-position: 0%;
+}
+100%{
+    background-position: 400%;
+}
+}
+#loveheart:before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    background-size: 400%;
+    border-radius: 40px;
+    opacity:0;
+    transition: 0.5s;
+
+}
+#loveheart:hover:before{
+    filter:blur(20px);
+    opacity: 1;
+    animation: animate 8s linear infinite;
+}
+
+.nivoSlider {   /*轮换图片的大小*/
+    position: relative;
+    width: 1500px;
+    height: 300px;
+    overflow: hidden;
+    margin: 0 auto;
+
+}
+
+.nivoSlider .slide{
+    width: 433px;
+    height: 280px;
+    position: absolute;
+    border: 10px solid;
+    border-color: rgba(200, 220, 255, 0.5);
+    border-image: url(../img/heartborder.png);
+    border-image-repeat:repeat;
+    border-image-slice: 41% 41%;
+    border-image-width: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+.container {
+    width: 100%;
+    height: 99.74%;
+    background-image: radial-gradient(2000px at 10% 130%, rgba(33, 39, 80, 1) 10%, #020409 100%);
+    float:left;
+}
+
+.content {
+    width: 100% auto;
+    height: 100% auto;
+}
+
+#universe {
+    width: 100% auto;
+    height: 100% auto;
+}
+
+
+#footer {
+    position: absolute;
+    bottom: 0%;
+    height: 300px;
+    width: 100%;
+}
+
+#scene {
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    margin-left: -768px;
+}
+
+a {
+    text-decoration: none;
+    color: rgba(200, 220, 255, 1);
+    opacity: .4;
+    -webkit-transition: opacity .4s ease;
+    transition: opacity .4s ease;
+}
+
+a:hover {
+    opacity: 1;
+}
+
+.txt {
+    color: hsla(0, 0%, 0%, 0);
+    text-shadow: #fff 0 0 10px;
+    transition: text-shadow 2s cubic-bezier(0, 1, 0, 1);
+}
+
+@-moz-document url-prefix() {
+    .txt {
+        text-shadow: #fff 0 0 20px;
+    }
+}
+
+#canvas{
+    margin: 0 auto;
+}
